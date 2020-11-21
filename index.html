@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> src="js/app.js"</script>
+</head>
+<body>
+    <form id="new-item-form">
+        <div id="form-wrapper">
+            <div class="form-item">
+                <label for="attraction-name" class="primary">Attraction Name</label>
+                <input type="text" id="attraction-name" required>
+            </div>
+
+            <div class="form-item">
+                <label for="city" class="primary">City</label>
+                <input type="text" id="author" required>
+            </div>
+
+            <div class="form-item">
+                <label for="country" class="primary">Country</label>
+                <select id="country">
+                    <option value="Choose country" disabled selected></option>
+                    <option value="England">England</option>
+                    <option value="Northern Ireland">Northern Ireland</option>
+                    <option value="Scotland">Scotland</option>
+                    <option value="Wales">Wales</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" value="save">
+    </form>
+
+    <button id="delete=all">Delete All</button>
+
+    <h1>List of Top UK Attractions</h1>
+    <ul id="attraction-list"></ul>
+</body>
+</html>
