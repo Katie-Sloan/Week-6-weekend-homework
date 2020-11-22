@@ -17,20 +17,10 @@ const handleNewItemFormSubmit = function (event) {
 }
 
 const createAttractionListItem = function (form) {
-    const attractionListItem = document.createElement('li');
+    attractionListItem = document.createElement('li');
     attractionListItem.classList.add('attraction-list-item');
 
-    const attractionName = document.createElement('h2');
-    attractionName.textContent = form['attraction-name'].value;
-    attractionListItem.appendChild(attractionName);
-
-    const city = document.createElement('h3');
-    city.textContent = form.city.value;
-    attractionListItem.appendChild(city);
-
-    const country = document.createElement('p');
-    country.textContent = form.country.value;
-    attractionListItem.appendChild(country);
+    addTextContentAndAppendChild(form); 
 
     return attractionListItem;
 }
@@ -38,4 +28,14 @@ const createAttractionListItem = function (form) {
 const handleDeleteAllClick = function (event) {
     const attractionList = document.querySelector('#attraction-list');
     attractionList.innerHTML = '';
+}
+
+const addTextContentAndAppendChild = function (form) {
+    const attractionName = document.createElement('h2');
+    attractionName.textContent = form['attraction-name'].value;
+    const city = document.createElement('h3');
+    city.textContent = form.city.value;
+    const country = document.createElement('p');
+    country.textContent = form.country.value;
+    attractionListItem.append(attractionName, city, country);
 }
