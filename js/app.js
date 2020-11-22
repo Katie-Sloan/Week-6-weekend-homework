@@ -20,7 +20,7 @@ const createAttractionListItem = function (form) {
     attractionListItem = document.createElement('li');
     attractionListItem.classList.add('attraction-list-item');
 
-    addTextContentAndAppendChild(form); 
+    addTextContentAndAppend(form); 
 
     return attractionListItem;
 }
@@ -30,7 +30,7 @@ const handleDeleteAllClick = function (event) {
     attractionList.innerHTML = '';
 }
 
-const addTextContentAndAppendChild = function (form) {
+const addTextContentAndAppend = function (form) {
     createNecessaryElements(form);
     addTextContent(form);
     
