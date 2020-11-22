@@ -56,6 +56,6 @@ const addTextContent = function (form) {
 }
 
 const dynamicEvent = function (event) {
-    const visitedOrNot = document.querySelector("#visited-button")
-    visitedOrNot.textContent = "Already Visited"
+    const visitedOrNot = document.querySelector('#visited-button');
+    visitedOrNot.textContent = 'Already Visited';
 }
