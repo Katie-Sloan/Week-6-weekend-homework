@@ -7,62 +7,69 @@
         <script src="js/app.js"></script>
     </head>
     <body>
-        <form id="new-item-form">
-            <div id="form-wrapper">
-                <div class="form-item">
-                    <label for="attraction-name" class="primary">Attraction Name</label>
-                    <input type="text" id="attraction-name" required/>
-                </div>
-
-                <div class="form-item">
-                    <p>Select a category:</p>
-                    <div>
-                        <label for="Outdoors">Outdoors</label>
-                        <input type="radio" id="Outdoors" name="category" value="Outdoors" checked>
+        <header>
+            <h1 id="main-heading">UK's Top Attractions List</h1>
+            <img src="images/union_jack.jpg" alt="Picture of union jack flag">   
+        </header>
+        <main> 
+            <form id="new-item-form">
+                <div id="form-wrapper">
+                    <div class="form-item">
+                        <label for="attraction-name" class="primary">Attraction Name</label>
+                        <input type="text" id="attraction-name" required/>
                     </div>
-                    <div>
-                        <label for="Historical">Historical</label>
-                        <input type="radio" id="Historical" name="category" value="Historical">
-                    </div>
-                    <div>
-                        <label for="Fun-activity">Fun activity</label>
-                        <input type="radio" id="Fun activity" name="category" value="Fun activity">
-                    </div>
-                </div>
 
-                <div class="form-item">
-                    <label for="city" class="primary">City</label>
-                    <input type="text" id="city" required/>
-                </div>
+                    <div class="form-item">
+                        <p>Select a category:</p>
+                        <div>
+                            <label for="Outdoors">Outdoors</label>
+                            <input type="radio" id="Outdoors" name="category" value="Outdoors" checked>
+                        </div>
+                        <div>
+                            <label for="Historical">Historical</label>
+                            <input type="radio" id="Historical" name="category" value="Historical">
+                        </div>
+                        <div>
+                            <label for="Fun-activity">Fun activity</label>
+                            <input type="radio" id="Fun activity" name="category" value="Fun activity">
+                        </div>
+                    </div>
 
-                <div class="form-item">
-                    <label for="country" class="primary">Country</label>
-                    <select id="country">
-                        <option value="" disabled selected></option>
-                        <option value="England">England</option>
-                        <option value="Northern Ireland">Northern Ireland</option>
-                        <option value="Scotland">Scotland</option>
-                        <option value="Wales">Wales</option>
-                    </select>
-                </div>
-                <div class="form-item">
+                    <div class="form-item">
+                        <label for="city" class="primary">City</label>
+                        <input type="text" id="city" required/>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="country" class="primary">Country</label>
+                        <select id="country">
+                            <option value="" disabled selected></option>
+                            <option value="England">England</option>
+                            <option value="Northern Ireland">Northern Ireland</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="Wales">Wales</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item">
                     <p>Visited:</p>
                     <div>
                         <label for="Yes">Yes</label>
-                        <input type="radio" id="Yes" name="visited" value="Yes">
+                        <input type="radio" id="Yes" name="visited" value="Already Visited">
                     </div>
                     <div>
                         <label for="No">No</label>
-                        <input type="radio" id="No" name="visited" value="No" checked>
+                        <input type="radio" id="No" name="visited" value="On Bucket List" checked>
                     </div>
                 </div>
             </div>
-            <input type="submit" value="save"/>
-        </form>
+            <input type="submit" value="Save"/>
+            </form>
 
         <button id="delete-all">Delete All</button>
 
-        <h1>UK's Top Attractions List</h1>
-        <ul id="attraction-list"></ul>    
+        <ul id="attraction-list"></ul>
+        
+    </main>
     </body>
 </html>
