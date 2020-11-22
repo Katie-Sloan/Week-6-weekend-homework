@@ -31,11 +31,15 @@ const handleDeleteAllClick = function (event) {
 }
 
 const addTextContentAndAppendChild = function (form) {
-    const attractionName = document.createElement('h2');
+    createNecessaryElements(form);
     attractionName.textContent = form['attraction-name'].value;
-    const city = document.createElement('h3');
     city.textContent = form.city.value;
-    const country = document.createElement('p');
     country.textContent = form.country.value;
     attractionListItem.append(attractionName, city, country);
+}
+
+const createNecessaryElements = function (form) {
+    attractionName = document.createElement('h2');
+    city = document.createElement('h3');
+    country = document.createElement('p');
 }
