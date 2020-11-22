@@ -32,9 +32,8 @@ const handleDeleteAllClick = function (event) {
 
 const addTextContentAndAppendChild = function (form) {
     createNecessaryElements(form);
-    attractionName.textContent = form['attraction-name'].value;
-    city.textContent = form.city.value;
-    country.textContent = form.country.value;
+    addTextContent(form);
+    
     attractionListItem.append(attractionName, city, country);
 }
 
@@ -42,4 +41,10 @@ const createNecessaryElements = function (form) {
     attractionName = document.createElement('h2');
     city = document.createElement('h3');
     country = document.createElement('p');
+}
+
+const addTextContent = function (form) {
+    attractionName.textContent = form['attraction-name'].value;
+    city.textContent = form.city.value;
+    country.textContent = form.country.value;
 }
