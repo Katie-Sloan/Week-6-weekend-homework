@@ -34,7 +34,7 @@ const addTextContentAndAppend = function (form) {
     createNecessaryElements(form);
     addTextContent(form);
     
-    attractionListItem.append(attractionName, category, city, country);
+    attractionListItem.append(attractionName, category, city, country, visited);
 }
 
 const createNecessaryElements = function (form) {
@@ -42,6 +42,9 @@ const createNecessaryElements = function (form) {
     category = document.createElement('h3');
     city = document.createElement('h3');
     country = document.createElement('p');
+    visited = document.createElement('button');
+    visited.id = 'visited-button';
+    visited.onclick = dynamicEvent;
 }
 
 const addTextContent = function (form) {
@@ -49,4 +52,10 @@ const addTextContent = function (form) {
     category.textContent = form.category.value;
     city.textContent = form.city.value;
     country.textContent = form.country.value;
+    visited.textContent = form.visited.value;
+}
+
+const dynamicEvent = function (event) {
+    const visitedOrNot = document.querySelector("#visited-button")
+    visitedOrNot.textContent = "hello"
 }
