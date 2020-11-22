@@ -34,17 +34,19 @@ const addTextContentAndAppend = function (form) {
     createNecessaryElements(form);
     addTextContent(form);
     
-    attractionListItem.append(attractionName, city, country);
+    attractionListItem.append(attractionName, category, city, country);
 }
 
 const createNecessaryElements = function (form) {
     attractionName = document.createElement('h2');
+    category = document.createElement('h3');
     city = document.createElement('h3');
     country = document.createElement('p');
 }
 
 const addTextContent = function (form) {
     attractionName.textContent = form['attraction-name'].value;
+    category.textContent = form.category.value;
     city.textContent = form.city.value;
     country.textContent = form.country.value;
 }
